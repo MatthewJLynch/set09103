@@ -16,10 +16,10 @@ def write(name=None):
 def read():
     try:
       if(session['name']):
-         return str(session['name'])
-      except KeyError:
-         pass
-      return "No Session variable set for 'name' key"
+          return str(session['name'])
+    except KeyError:
+      pass
+    return "No Session variable set for 'name' key"
 
 @app.route('/session/remove/')
 def remove():
